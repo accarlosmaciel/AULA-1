@@ -373,19 +373,95 @@ body {
 
 .hero-text h2 {
     font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 14px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
     color: var(--text-primary);
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
+}
+
+.hero-highlight {
+    background: linear-gradient(135deg, var(--primary-light), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-text p {
     font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 26px;
+    line-height: 1.75;
+    margin-bottom: 24px;
     color: var(--text-secondary);
+}
+
+/* --- Hero CTAs --- */
+.hero-ctas {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-primary);
+    background: transparent;
+    padding: 11px 22px;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--border-hover);
+    transition: var(--transition);
+    letter-spacing: 0.3px;
+}
+
+.btn-secondary:hover {
+    background: rgba(108, 99, 255, 0.1);
+    border-color: var(--primary-light);
+    color: var(--primary-light);
+}
+
+/* --- Trust Bar --- */
+.hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 4px;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-item strong {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.trust-item span {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+}
+
+.trust-divider {
+    width: 1px;
+    height: 30px;
+    background: var(--border);
 }
 
 .btn-more {
@@ -430,7 +506,7 @@ body {
     z-index: 1;
 }
 
-/* --- Hero Mockup --- */
+/* --- Hero Image --- */
 .hero-images {
     width: 36%;
     position: relative;
@@ -444,64 +520,32 @@ body {
     width: 100%;
 }
 
-.mockup-screen {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+.hero-img {
+    width: 100%;
+    height: auto;
     border-radius: var(--radius-md);
-    padding: 16px;
-    box-shadow: var(--glow), 0 20px 40px rgba(0, 0, 0, 0.4);
-    animation: float 4s ease-in-out infinite;
+    box-shadow: var(--glow), 0 24px 48px rgba(0, 0, 0, 0.5);
+    animation: float 5s ease-in-out infinite;
+    border: 1px solid var(--border);
+    display: block;
 }
 
 @keyframes float {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0px) rotate(0deg);
     }
 
-    50% {
-        transform: translateY(-8px);
+    33% {
+        transform: translateY(-8px) rotate(0.5deg);
+    }
+
+    66% {
+        transform: translateY(-4px) rotate(-0.3deg);
     }
 }
 
-.mockup-bar {
-    height: 8px;
-    border-radius: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    margin-bottom: 12px;
-}
-
-.mockup-line {
-    height: 6px;
-    border-radius: 3px;
-    background: var(--bg-surface);
-    margin-bottom: 8px;
-}
-
-.mockup-line.w80 {
-    width: 80%;
-}
-
-.mockup-line.w60 {
-    width: 60%;
-}
-
-.mockup-line.w90 {
-    width: 90%;
-}
-
-.mockup-line.w40 {
-    width: 40%;
-}
-
-.mockup-block {
-    height: 50px;
-    border-radius: var(--radius-sm);
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.2), rgba(0, 212, 255, 0.1));
-    border: 1px solid var(--border);
-    margin-top: 10px;
-}
 
 /* ============================================================
    TRÊS COLUNAS
