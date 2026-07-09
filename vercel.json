@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/carlosmaciel/$1"
+      "destination": "/carlosmaciel/
     }
   ]
 }
